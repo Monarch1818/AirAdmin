@@ -130,7 +130,115 @@
                   <p>Report Problem</p>
                 </a>
               </li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link" aria-expanded="true">
+                  <i class="nav-icon bi bi-printer"></i>
+                  <p>
+                    Report
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="box-sizing: border-box; display: block;">
+                  <li class="nav-item">
+                    <a href="./Report-Academic.php" class="nav-link">
+                      <p>Academic Result report</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Report-LearnerT.php" class="nav-link">
+                      <p>Learner Tracking report</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Report-LearnerS.php" class="nav-link">
+                      <p>Learner Status Report</p>
+                    </a>
+                  </li>
+                   <li class="nav-item">
+                    <a href="./Report-LearnerEr.php" class="nav-link">
+                      <p>Learner Exam Result report</p>
+                    </a>
+                  </li>
+                   <li class="nav-item">
+                    <a href="./Report-LearnerEs.php" class="nav-link">
+                      <p>Learner Exam Answer report</p>
+                    </a>
+                  </li>
+                   <li class="nav-item">
+                    <a href="./Report-Attending.php" class="nav-link">
+                      <p>Attending Class report</p>
+                    </a>
+                  </li>
+                   <li class="nav-item">
+                    <a href="./Report-Sueway.php" class="nav-link">
+                      <p>Surway Report</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+          <li class="nav-item menu-open">
+                <a href="#" class="nav-link" aria-expanded="true">
+                  <i class="nav-icon bi bi-printer"></i>
+                  <p>
+                    Certificate Management
+          <i class="nav-arrow bi bi-chevron-right float-end"></i>           
+            </p>
+                </a>
+                <ul class="nav nav-treeview" style="box-sizing: border-box; display: block;">
+                  <li class="nav-item">
+                    <a href="./Certificate-Cer.php" class="nav-link">
+                      <p>Certificate</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Certificate-Sig.php" class="nav-link">
+                      <p>Signature</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Certificate-Pass.php" class="nav-link">
+                      <p>Report Passcours</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
+                <li class="nav-item menu-open">
+                <a href="#" class="nav-link" aria-expanded="true">
+                  <i class="nav-icon bi bi-printer"></i>
+                  <p>
+                   Organization Management
+          <i class="nav-arrow bi bi-chevron-right float-end"></i>           
+            </p>
+                </a>
+                <ul class="nav nav-treeview" style="box-sizing: border-box; display: block;">
+                  <li class="nav-item">
+                    <a href="./Organization-Or.php" class="nav-link">
+                      <p>Organization</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Organization-Co.php" class="nav-link">
+                      <p>Company</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Organization-De.php" class="nav-link">
+                      <p>Department</p>
+                    </a>
+                  </li>
+                   <li class="nav-item">
+                    <a href="./Organization-Po.php" class="nav-link">
+                      <p>Position</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
+                  
+              
               
             <!--end::Sidebar Menu-->
 
