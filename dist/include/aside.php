@@ -1,150 +1,219 @@
- <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-        <!--begin::Sidebar Brand-->
-        <div class="sidebar-brand">
-          <!--begin::Brand Link-->
-          <a href="./index.html" class="brand-link">
-            <!--begin::Brand Image-->
-            <img
-              src="./assets/img/AdminLTELogo.png"
-              alt="AdminLTE Logo"
-              class="brand-image opacity-75 shadow"
-            />
-            <!--end::Brand Image-->
-            <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Brother Admin</span>
-            <!--end::Brand Text-->
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+
+function isActivePage($page)
+{
+    global $currentPage;
+
+    return $currentPage === $page ? 'active' : '';
+}
+?>
+
+<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+  <!--begin::Sidebar Brand-->
+  <div class="sidebar-brand">
+    <a href="./index.php" class="brand-link">
+      <img
+        src="./assets/img/AdminLTELogo.png"
+        alt="AdminLTE Logo"
+        class="brand-image opacity-75 shadow"
+      />
+      <span class="brand-text fw-light">Brother Admin</span>
+    </a>
+  </div>
+  <!--end::Sidebar Brand-->
+
+  <!--begin::Sidebar Search-->
+  <div class="sidebar-search" role="search">
+    <label for="sidebar-search-input" class="visually-hidden">
+      Filter menu
+    </label>
+
+    <input
+      type="search"
+      id="sidebar-search-input"
+      class="form-control form-control-sm"
+      placeholder="Filter menu…"
+      autocomplete="off"
+      data-lte-toggle="sidebar-search"
+      data-lte-target="#navigation"
+    />
+
+    <p
+      class="fs-7 text-secondary mt-2 mb-0"
+      data-lte-search-empty
+      role="status"
+      hidden
+    >
+      No matching pages.
+    </p>
+  </div>
+  <!--end::Sidebar Search-->
+
+  <!--begin::Sidebar Wrapper-->
+  <div class="sidebar-wrapper">
+    <nav class="mt-2" aria-label="Main navigation">
+
+      <!--begin::Sidebar Menu-->
+      <ul
+        class="nav sidebar-menu flex-column"
+        data-lte-toggle="treeview"
+        data-accordion="false"
+        id="navigation"
+      >
+
+        <!-- 1. Home -->
+        <li class="nav-item">
+          <a href="./index.php" class="nav-link <?= isActivePage('index.php') ?>">
+            <i class="nav-icon fa-solid fa-house"></i>
+            <p>Home</p>
           </a>
-          <!--end::Brand Link-->
-        </div>
-        <!--end::Sidebar Brand-->
-        <!--begin::Sidebar Search-->
-        <div class="sidebar-search" role="search">
-          <label for="sidebar-search-input" class="visually-hidden">Filter menu</label>
-          <input
-            type="search"
-            id="sidebar-search-input"
-            class="form-control form-control-sm"
-            placeholder="Filter menu…"
-            autocomplete="off"
-            data-lte-toggle="sidebar-search"
-            data-lte-target="#navigation"
-          />
-          <p class="fs-7 text-secondary mt-2 mb-0" data-lte-search-empty role="status" hidden>
-            No matching pages.
-          </p>
-        </div>
-        <!--end::Sidebar Search-->
-        <!--begin::Sidebar Wrapper-->
-        <div class="sidebar-wrapper">
-          <nav class="mt-2" aria-label="Main navigation">
-            <!--begin::Sidebar Menu-->
-            <ul
-              class="nav sidebar-menu flex-column"
-              data-lte-toggle="treeview"
-              data-accordion="false"
-              id="navigation"
-            >
-              <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
-                  <i class="nav-icon bi bi-speedometer"></i>
-                  <p>
-                    Dashboard
-                    <i class="nav-arrow bi bi-chevron-right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="./index.html" class="nav-link active">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v1</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v2</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              
-              <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>About us</p>
-                </a>
-              </li>
+        </li>
 
-              <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Term of use</p>
-                </a>
-              </li>
+        <!-- 2. About Us -->
+        <li class="nav-item">
+          <a href="./about-us.php" class="nav-link <?= isActivePage('about-us.php') ?>">
+            <i class="nav-icon fa-solid fa-table-cells-large"></i>
+            <p>About Us</p>
+          </a>
+        </li>
 
-               <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>News</p>
-                </a>
-              </li>
+        <!-- 3. Terms of use -->
+        <li class="nav-item">
+          <a href="./term-to-use.php" class="nav-link <?= isActivePage('term-to-use.php') ?>">
+            <i class="nav-icon fa-solid fa-gear"></i>
+            <p>Terms of use</p>
+          </a>
+        </li>
 
-                 <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>How to use</p>
-                </a>
-              </li>
+        
+        <!-- 4. News -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa-solid fa-folder-open"></i>
+            <p>
+              News
+              <i class="nav-arrow fa-solid fa-chevron-right"></i>
+            </p>
+          </a>
 
-                  <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Faq</p>
-                </a>
-              </li>
+          <ul class="nav nav-treeview">
 
-                    <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Recommended video</p>
-                </a>
-              </li>
-
-              
-                    <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Term and Conditions</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Report Problem</p>
-                </a>
-              </li>
-
-              
-            <!--end::Sidebar Menu-->
-
-            <!-- Docs CTA (bottom of sidebar) -->
-            <div class="p-3 mt-3 border-top border-secondary border-opacity-25">
-              <a
-                href="./docs/introduction.html"
-                class="btn btn-sm btn-outline-light w-100 d-flex align-items-center justify-content-center gap-2"
-              >
-                <i class="bi bi-book" aria-hidden="true"></i>
-                View documentation
+            <!-- Add News -->
+            <li class="nav-item">
+              <a href="./users.html" class="nav-link">
+                <p>Add News</p>
               </a>
-            </div>
-          </nav>
-        </div>
-        <!--end::Sidebar Wrapper-->
-      </aside>
+            </li>
+
+            <!-- News -->
+            <li class="nav-item">
+              <a href="./users.html" class="nav-link">
+                <p>News</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- 5. How to use -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa-solid fa-clipboard"></i>
+            <p>
+              How to use
+              <i class="nav-arrow fa-solid fa-chevron-right"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+
+            <li class="nav-item">
+              <a href="./users.html" class="nav-link">
+                
+                <p>Add How to use</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./users.html" class="nav-link">
+                
+                <p>How to use</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- 6. FAQ -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa-solid fa-circle-question"></i>
+            <p>
+              FAQ
+              <i class="nav-arrow fa-solid fa-chevron-right"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+
+            <li class="nav-item">
+              <a href="./users.html" class="nav-link">
+                
+                <p>Category FAQ</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./users.html" class="nav-link">
+                
+                <p>FAQ</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- 7. Recommended video (เดิม) -->
+        <li class="nav-item">
+          <a href="./users.html" class="nav-link">
+            <i class="nav-icon fa-solid fa-people-group"></i>
+            <p>Recommended video</p>
+          </a>
+        </li>
+
+        <!-- 8. Term and Conditions (เดิม) -->
+        <li class="nav-item">
+          <a href="./users.html" class="nav-link">
+            <i class="nav-icon fa-solid fa-people-group"></i>
+            <p>Term and Conditions</p>
+          </a>
+        </li>
+
+        <!-- 9. Report Problem (เดิม) -->
+        <li class="nav-item">
+          <a href="./users.html" class="nav-link">
+            <i class="nav-icon fa-solid fa-people-group"></i>
+            <p>Report Problem</p>
+          </a>
+        </li>
+
+      </ul>
+      <!--end::Sidebar Menu-->
+
+      <!-- Docs CTA (bottom of sidebar) -->
+      <div class="p-3 mt-3 border-top border-secondary border-opacity-25">
+        <a
+          href="./docs/introduction.html"
+          class="btn btn-sm btn-outline-light w-100 d-flex align-items-center justify-content-center gap-2"
+        >
+          <i class="fa-solid fa-book" aria-hidden="true"></i>
+          View documentation
+        </a>
+      </div>
+
+    </nav>
+  </div>
+  <!--end::Sidebar Wrapper-->
+
+</aside>
