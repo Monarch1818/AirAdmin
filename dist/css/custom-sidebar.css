@@ -1,0 +1,227 @@
+/* =====================================================
+   NEW SIDEBAR MENU
+   ===================================================== */
+
+.menu-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 22px;
+
+    margin-right: 5px;
+
+    background: #0d8df5;
+    color: #fff;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* Main menu */
+
+.sidebar-menu > .nav-item > .nav-link {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Menu text */
+
+.sidebar-menu .nav-link p {
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Icons */
+
+.sidebar-menu .nav-icon {
+    font-size: 20px;
+}
+
+
+/* Arrow */
+
+.sidebar-menu .nav-arrow {
+    margin-left: auto;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* Rotate arrow when dropdown open */
+
+.sidebar-menu
+.nav-item.menu-open
+> .nav-link
+.nav-arrow {
+
+    transform: rotate(90deg);
+}
+
+
+/* Submenu */
+
+.sidebar-menu .nav-treeview {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+/* Submenu item */
+
+.sidebar-menu .nav-treeview .nav-link {
+
+    min-height: 42px;
+
+    padding-left: 55px;
+
+    font-size: 15px;
+}
+
+
+/* Submenu circle */
+
+.sidebar-menu .nav-treeview .nav-icon {
+
+    font-size: 7px;
+
+    margin-right: 10px;
+}
+
+
+/* Hover */
+
+.sidebar-menu .nav-link:hover {
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    color: #fff;
+}
+
+
+/* Active */
+
+.sidebar-menu .nav-link.active {
+
+    color: #fff;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sidebar-menu .nav-link {
+        font-size: 15px;
+    }
+
+    .sidebar-menu .nav-treeview .nav-link {
+        padding-left: 48px;
+    }
+
+}
+
+
+/* =========================================
+   CATEGORY / COURSE / LESSON MENU
+========================================= */
+
+.menu-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 19px;
+    height: 21px;
+
+    margin-right: 5px;
+
+    background-color: #0d8df5;
+    color: #ffffff;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* Main menu */
+
+.sidebar-menu > .nav-item > .nav-link p {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+/* Arrow */
+
+.sidebar-menu .nav-arrow {
+    margin-left: auto;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* หมุนลูกศรตอนเปิด */
+
+.sidebar-menu .nav-item.menu-open > .nav-link .nav-arrow {
+    transform: rotate(90deg);
+}
+
+
+/* Dropdown */
+
+.sidebar-menu .nav-treeview {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/* รายการข้างใน Dropdown */
+
+.sidebar-menu .nav-treeview .nav-link {
+    padding-left: 55px;
+
+    min-height: 42px;
+
+    font-size: 15px;
+}
+
+
+/* จุดเล็กด้านหน้า */
+
+.sidebar-menu .nav-treeview .nav-icon {
+    font-size: 6px;
+
+    margin-right: 10px;
+}
+
+
+/* Hover */
+
+.sidebar-menu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Active */
+
+.sidebar-menu .nav-link.active {
+    color: #ffffff;
+}

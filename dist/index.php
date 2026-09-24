@@ -33,7 +33,7 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Terms of use</h1>
+                <h1 class="mb-0 fs-3">Home</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">

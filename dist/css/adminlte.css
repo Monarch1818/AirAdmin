@@ -16049,3 +16049,12 @@ fieldset legend {
 }
 
 /*# sourceMappingURL=adminlte.css.map */
+/* Align dropdown submenu text with main menu text */
+.app-sidebar .nav-treeview > .nav-item > .nav-link {
+    padding-left: 2.5rem;
+}
+
+/* Keep submenu text aligned and remove extra spacing */
+.app-sidebar .nav-treeview > .nav-item > .nav-link p {
+    margin: 0;
+}
