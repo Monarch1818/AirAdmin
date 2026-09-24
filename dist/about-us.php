@@ -29,7 +29,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6">
-            <h1 class="mb-0 fs-3">Edit</h1>
+            <h1 class="mb-0 fs-3">About Us</h1>
           </div>
 
           <div class="col-sm-6">
