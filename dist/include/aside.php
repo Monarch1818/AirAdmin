@@ -88,8 +88,11 @@ function isActivePage($page)
 
         
         <!-- 4. News -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?= in_array($currentPage, ['add-news.php', 'news.php']) ? 'menu-open' : '' ?>">
+          <a
+            href="#"
+            class="nav-link <?= in_array($currentPage, ['add-news.php', 'news.php']) ? 'active' : '' ?>"
+          >
             <i class="nav-icon fa-solid fa-folder-open"></i>
             <p>
               News
@@ -101,14 +104,20 @@ function isActivePage($page)
 
             <!-- Add News -->
             <li class="nav-item">
-              <a href="./users.html" class="nav-link">
+              <a
+                href="./add-news.php"
+                class="nav-link <?= isActivePage('add-news.php') ?>"
+              >
                 <p>Add News</p>
               </a>
             </li>
 
             <!-- News -->
             <li class="nav-item">
-              <a href="./users.html" class="nav-link">
+              <a
+                href="./news.php"
+                class="nav-link <?= isActivePage('news.php') ?>"
+              >
                 <p>News</p>
               </a>
             </li>
@@ -116,33 +125,52 @@ function isActivePage($page)
           </ul>
         </li>
 
+        
         <!-- 5. How to use -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?= in_array($currentPage, ['add-how-to-use.php', 'how-to-use.php']) ? 'menu-open' : '' ?>">
+
+          <a
+            href="#"
+            class="nav-link <?= in_array($currentPage, ['add-how-to-use.php', 'how-to-use.php']) ? 'active' : '' ?>"
+          >
+
             <i class="nav-icon fa-solid fa-clipboard"></i>
+
             <p>
               How to use
               <i class="nav-arrow fa-solid fa-chevron-right"></i>
             </p>
+
           </a>
 
           <ul class="nav nav-treeview">
 
+            <!-- Add How to use -->
             <li class="nav-item">
-              <a href="./users.html" class="nav-link">
-                
+
+              <a
+                href="./add-how-to-use.php"
+                class="nav-link <?= isActivePage('add-how-to-use.php') ?>"
+              >
                 <p>Add How to use</p>
               </a>
+
             </li>
 
+            <!-- How to use -->
             <li class="nav-item">
-              <a href="./users.html" class="nav-link">
-                
+
+              <a
+                href="./how-to-use.php"
+                class="nav-link <?= isActivePage('how-to-use.php') ?>"
+              >
                 <p>How to use</p>
               </a>
+
             </li>
 
           </ul>
+
         </li>
 
         <!-- 6. FAQ -->
