@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en">
+
+ <head>
+    <title>AdminLTE 4 | Data Tables</title>
+
+   
+  </head>
   
   <!--begin::Head-->
       <?php include 'include/head.php';?>
@@ -27,13 +33,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Dashboard</h1>
+                <h1 class="mb-0 fs-3">Terms of use</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    <li class="breadcrumb-item active" aria-current="page">Terms of use</li>
                   </ol>
                 </nav>
               </div>
@@ -47,155 +53,63 @@
         <div class="app-content">
           <!--begin::Container-->
           <div class="container-fluid">
-
-            <!--begin::Row-->
-            <div class="row">
-              <!--begin::Col-->
-              <div class="col-lg-3 col-6">
-                <!--begin::Small Box Widget 1-->
-                <div class="small-box text-bg-primary">
-                  <div class="inner">
-                    <h3>150</h3>
-
-                    <p>New Orders</p>
+            <div class="mb-3">
+                      <label class="form-label" for="select-default">Select</label>
+                      <select class="form-select" id="select-default">
+                        <option selected="">Open this select menu</option>
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                      </select>
+                    </div>
+            <div class="card card-primary card-outline mb-4">
+                  <form>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Title </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <div class="col-12">
+                    <label class="form-label" for="mail-body">Detail</label>
+                    <textarea id="mail-body" class="form-control" rows="12" placeholder="Write your message…" style="min-height: 8rem"></textarea>
+                    <small class="text-secondary">
+                      Hook up a rich-text editor such as
+                      <a href="https://quilljs.com/" target="_blank" rel="noopener">Quill</a>
+                      or
+                      <a href="https://github.com/Ionaru/easy-markdown-editor" target="_blank" rel="noopener">EasyMDE</a>
+                      to upgrade this textarea.
+                    </small>
                   </div>
-                  <svg
-                    class="small-box-icon"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                    ></path>
-                  </svg>
-                  <a
-                    href="#"
-                    class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
-                  >
-                    More info <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-                <!--end::Small Box Widget 1-->
+                    </div>
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                  </form>
               </div>
-              <!--end::Col-->
-              <div class="col-lg-3 col-6">
-                <!--begin::Small Box Widget 2-->
-                <div class="small-box text-bg-success">
-                  <div class="inner">
-                    <h3>53<sup class="fs-5">%</sup></h3>
 
-                    <p>Bounce Rate</p>
+              <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">News</h3>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 16rem">
+                    <span class="input-group-text">
+                      <i class="bi bi-search" aria-hidden="true"></i>
+                    </span>
+                    <input id="table-filter" type="search" class="form-control" placeholder="Filter rows…" aria-label="Filter rows">
                   </div>
-                  <svg
-                    class="small-box-icon"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z"
-                    ></path>
-                  </svg>
-                  <a
-                    href="#"
-                    class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
-                  >
-                    More info <i class="bi bi-link-45deg"></i>
-                  </a>
                 </div>
-                <!--end::Small Box Widget 2-->
               </div>
-              <!--end::Col-->
-              <div class="col-lg-3 col-6">
-                <!--begin::Small Box Widget 3-->
-                <div class="small-box text-bg-warning">
-                  <div class="inner">
-                    <h3>44</h3>
-
-                    <p>User Registrations</p>
-                  </div>
-                  <svg
-                    class="small-box-icon"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z"
-                    ></path>
-                  </svg>
-                  <a
-                    href="#"
-                    class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover"
-                  >
-                    More info <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-                <!--end::Small Box Widget 3-->
+              <div class="card-body">
+             
+                <div id="users-table" class="tabulator" role="grid" aria-owns="tabulator-table-body" tabulator-layout="fitColumns"><div class="tabulator-header" role="rowgroup"><div class="tabulator-header-contents"><div class="tabulator-headers" role="row" style="height: 84px;"><div class="tabulator-col tabulator-sortable tabulator-col-sorter-element" role="columnheader" aria-sort="none" tabulator-field="id" style="min-width: 40px; width: 60px; height: 84px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title">#</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div></div><span class="tabulator-col-resize-handle" style="height: 84px;"></span><div class="tabulator-col tabulator-sortable tabulator-col-sorter-element" role="columnheader" aria-sort="none" tabulator-field="name" style="min-width: 40px; width: 422px; height: 84px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title">Name</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div><div class="tabulator-header-filter"><input type="search" placeholder="" style="padding: 4px; width: 100%; box-sizing: border-box;"></div></div></div><span class="tabulator-col-resize-handle" style="height: 84px;"></span><div class="tabulator-col tabulator-sortable tabulator-col-sorter-element" role="columnheader" aria-sort="none" tabulator-field="email" style="min-width: 40px; width: 422px; height: 84px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title">Email</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div><div class="tabulator-header-filter"><input type="search" placeholder="" style="padding: 4px; width: 100%; box-sizing: border-box;"></div></div></div><span class="tabulator-col-resize-handle" style="height: 84px;"></span><div class="tabulator-col tabulator-sortable tabulator-col-sorter-element" role="columnheader" aria-sort="none" tabulator-field="role" style="min-width: 40px; width: 120px; height: 84px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title">Role</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div><div class="tabulator-header-filter"><input type="search" placeholder="" style="padding: 4px; width: 100%; box-sizing: border-box; cursor: default; caret-color: transparent;"></div></div></div><span class="tabulator-col-resize-handle" style="height: 84px;"></span><div class="tabulator-col tabulator-sortable tabulator-col-sorter-element" role="columnheader" aria-sort="none" tabulator-field="status" style="min-width: 40px; width: 130px; height: 84px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title">Status</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div><div class="tabulator-header-filter"><input type="search" placeholder="" style="padding: 4px; width: 100%; box-sizing: border-box; cursor: default; caret-color: transparent;"></div></div></div><span class="tabulator-col-resize-handle" style="height: 84px;"></span><div class="tabulator-col tabulator-sortable tabulator-col-sorter-element" role="columnheader" aria-sort="none" tabulator-field="joined" style="min-width: 40px; width: 130px; height: 84px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title">Joined</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div></div><span class="tabulator-col-resize-handle" style="height: 84px;"></span></div><div class="tabulator-frozen-rows-holder" style="min-width: 0px;"></div></div></div><div class="tabulator-tableholder" tabindex="0" style="height: 490px;"><div class="tabulator-table" role="rowgroup" id="tabulator-table-body" style="padding-top: 0px; padding-bottom: 0px;"><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">1</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">dddddd</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">olivia@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Admin</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-success">Active</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-03-12</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">2</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Liam Carter</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">liam@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Editor</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-success">Active</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-04-08</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">3</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Emma Dawson</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">emma@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Viewer</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-info">Invited</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-06-21</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">4</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Noah Evans</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">noah@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Editor</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-secondary">Suspended</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-07-15</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">5</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Ava Foster</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">ava@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Admin</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-success">Active</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-08-30</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">6</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Ethan Grant</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">ethan@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Viewer</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-success">Active</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-09-14</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">7</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Sophia Hayes</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">sophia@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Editor</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-success">Active</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-10-02</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">8</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Mason Ingram</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">mason@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Viewer</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-info">Invited</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2024-11-19</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">9</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Isabella Jones</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">isabella@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Admin</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-success">Active</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2025-01-05</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row"><div class="tabulator-cell" role="gridcell" tabulator-field="id" style="width: 60px; height: 48px;">10</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="name" style="width: 422px; height: 48px;">Lucas Klein</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="email" style="width: 422px; height: 48px;">lucas@example.com</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="role" style="width: 120px; height: 48px;">Viewer</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="status" style="width: 130px; text-align: center; height: 48px;"><span class="badge text-bg-secondary">Suspended</span></div><span class="tabulator-col-resize-handle" style="height: 48px;"></span><div class="tabulator-cell" role="gridcell" tabulator-field="joined" style="width: 130px; height: 48px;">2025-02-18</div><span class="tabulator-col-resize-handle" style="height: 48px;"></span></div></div></div><div class="tabulator-footer"><div class="tabulator-footer-contents"><span class="tabulator-paginator"><label>Page Size</label><select class="tabulator-page-size" aria-label="Page Size" title="Page Size"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select><button class="tabulator-page" type="button" role="button" aria-label="First Page" title="First Page" data-page="first" disabled="">First</button><button class="tabulator-page" type="button" role="button" aria-label="Prev Page" title="Prev Page" data-page="prev" disabled="">Prev</button><span class="tabulator-pages"><button class="tabulator-page active" type="button" role="button" aria-label="Show Page 1" title="Show Page 1" data-page="1">1</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 2" title="Show Page 2" data-page="2">2</button></span><button class="tabulator-page" type="button" role="button" aria-label="Next Page" title="Next Page" data-page="next">Next</button><button class="tabulator-page" type="button" role="button" aria-label="Last Page" title="Last Page" data-page="last">Last</button></span></div></div></div>
               </div>
-              <!--end::Col-->
-              <div class="col-lg-3 col-6">
-                <!--begin::Small Box Widget 4-->
-                <div class="small-box text-bg-danger">
-                  <div class="inner">
-                    <h3>65</h3>
-
-                    <p>Unique Visitors</p>
-                  </div>
-                  <svg
-                    class="small-box-icon"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      fill-rule="evenodd"
-                      d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z"
-                    ></path>
-                    <path
-                      clip-rule="evenodd"
-                      fill-rule="evenodd"
-                      d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z"
-                    ></path>
-                  </svg>
-                  <a
-                    href="#"
-                    class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
-                  >
-                    More info <i class="bi bi-link-45deg"></i>
-                  </a>
-                </div>
-                <!--end::Small Box Widget 4-->
+              <div class="card-footer text-secondary small">
+                Powered by
+                <a href="https://tabulator.info/" target="_blank" rel="noopener">Tabulator</a>
+                — vanilla JS, no jQuery required.
               </div>
-              <!--end::Col-->
             </div>
-            <!--end::Row-->
-
-            <!--begin::Row-->
-            <div class="row">
-              <!-- Start col -->
-              <div class="col-lg-7 connectedSortable">
-                <div class="card mb-4">
-                  <div class="card-header">
-                    <h3 class="card-title">Sales Value</h3>
-                  </div>
-
-                  <div class="card-body">
-                    <div id="revenue-chart"></div>
-                  </div>
-                </div>
-                <!-- /.card -->
-              </div>
-              <!-- /.Start col -->
-            </div>
-            
-            <!-- /.row (main row) -->
+         
           </div>
           <!--end::Container-->
         </div>
@@ -210,67 +124,118 @@
     </div>
     <!--end::App Wrapper-->
     
-    <!-- ChartJS -->
+   
+   
     <script>
-      // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
-      // IT'S ALL JUST JUNK FOR DEMO
-      // ++++++++++++++++++++++++++++++++++++++++++
-
-      const sales_chart_options = {
-        series: [
-          {
-            name: 'Digital Goods',
-            data: [28, 48, 40, 19, 86, 27, 90],
-          },
-          {
-            name: 'Electronics',
-            data: [65, 59, 80, 81, 56, 55, 40],
-          },
-        ],
-        chart: {
-          id: 'revenue-chart',
-          height: 300,
-          type: 'area',
-          toolbar: {
-            show: false,
-          },
-        },
-        legend: {
-          show: false,
-        },
-        colors: ['#0d6efd', '#20c997'],
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          curve: 'smooth',
-        },
-        xaxis: {
-          type: 'datetime',
-          categories: [
-            '2023-01-01',
-            '2023-02-01',
-            '2023-03-01',
-            '2023-04-01',
-            '2023-05-01',
-            '2023-06-01',
-            '2023-07-01',
-          ],
-        },
-        tooltip: {
-          x: {
-            format: 'MMMM yyyy',
-          },
-        },
+      const statusBadge = (cell) => {
+        const value = cell.getValue();
+        const map = { Active: 'success', Invited: 'info', Suspended: 'secondary' };
+        const color = map[value] || 'secondary';
+        return `<span class="badge text-bg-${color}">${value}</span>`;
       };
 
-      const sales_chart = new ApexCharts(
-        document.querySelector('#revenue-chart'),
-        sales_chart_options,
-      );
-      sales_chart.render();
+      document.addEventListener('DOMContentLoaded', () => {
+        const data = [
+          {
+            id: 1,
+            name: 'dfedfwefewfew',
+            detail: 'rrrrrrrr',
+            role: 'Admin',
+            status: 'Active',
+            joined: '2024-03-12',
+          },
+          {
+            id: 2,
+            name: 'Liam Carter',
+            detail: 'liam@example.com',
+            role: 'Editor',
+            status: 'Active',
+            joined: '2024-04-08',
+          },
+          {
+            id: 3,
+            name: 'Emma Dawson',
+            detail: 'emma@example.com',
+            role: 'Viewer',
+            status: 'Invited',
+            joined: '2024-06-21',
+          },
+          {
+            id: 4,
+            name: 'Noah Evans',
+            detail: 'noah@example.com',
+            role: 'Editor',
+            status: 'Suspended',
+            joined: '2024-07-15',
+          },
+          {
+            id: 5,
+            name: 'Ava Foster',
+            detail: 'ava@example.com',
+            role: 'Admin',
+            status: 'Active',
+            joined: '2024-08-30',
+          },
+          {
+            id: 6,
+            name: 'Ethan Grant',
+            detail: 'ethan@example.com',
+            role: 'Viewer',
+            status: 'Active',
+            joined: '2024-09-14',
+          }
+        ];
+
+        const table = new Tabulator('#users-table', {
+          data: data,
+          layout: 'fitColumns',
+          pagination: true,
+          paginationSize: 10,
+          paginationSizeSelector: [10, 25, 50, 100],
+          movableColumns: true,
+          columns: [
+            { title: '#', field: 'id', width: 60, headerSort: true },
+            { title: 'Name', field: 'name', headerFilter: 'input' },
+            { title: 'Detail', field: 'name', headerFilter: 'input' },
+           
+            {
+              title: 'Status',
+              field: 'status',
+              formatter: statusBadge,
+              headerFilter: 'list',
+              headerFilterParams: { values: ['', 'Active', 'Invited', 'Suspended'] },
+              width: 130,
+              hozAlign: 'center',
+            },
+           
+          ],
+        });
+
+        document.getElementById('table-filter').addEventListener('input', (e) => {
+          const value = e.target.value;
+          if (value) {
+            table.setFilter([
+              [
+                { field: 'name', type: 'like', value: value },
+                { field: 'email', type: 'like', value: value },
+              ],
+            ]);
+          } else {
+            table.clearFilter();
+          }
+        });
+
+        document
+          .getElementById('export-csv')
+          .addEventListener('click', () => table.download('csv', 'users.csv'));
+        document
+          .getElementById('export-json')
+          .addEventListener('click', () => table.download('json', 'users.json'));
+        document
+          .getElementById('print-table')
+          .addEventListener('click', () => table.print(false, true));
+      });
     </script>
-    <!--end::Script-->
 
   </body>
   <!--end::Body-->
