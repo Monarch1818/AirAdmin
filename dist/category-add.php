@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
 
-```
+
 <!--begin::App Wrapper-->
 <div class="app-wrapper">
 
@@ -823,7 +823,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </script>
 <!--end::Page Script-->
-```
 
 </body>
 <!--end::Body-->
