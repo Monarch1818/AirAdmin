@@ -141,29 +141,39 @@ function isActivePage($page)
           </ul>
         </li>
 
+        
         <!-- 6. FAQ -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fa-solid fa-circle-question"></i>
-            <p>
-              FAQ
-              <i class="nav-arrow fa-solid fa-chevron-right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./faq-category.php" class="nav-link">
-                <i class="nav-icon fa-solid fa-circle"></i>
-                <p>Category FAQ</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./faq.php" class="nav-link">
-                <i class="nav-icon fa-solid fa-circle"></i>
-                <p>FAQ</p>
-              </a>
-            </li>
-          </ul>
+        <li class="nav-item <?= in_array($currentPage, ['category-faq.php', 'faq.php']) ? 'menu-open' : '' ?>">
+            <a href="#"
+              class="nav-link <?= in_array($currentPage, ['category-faq.php', 'faq.php']) ? 'active' : '' ?>">
+                <i class="nav-icon fa-solid fa-circle-question"></i>
+                <p>
+                    FAQ
+                    <i class="nav-arrow fa-solid fa-chevron-right"></i>
+                </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+
+                <!-- Category FAQ -->
+                <li class="nav-item">
+                    <a href="./category-faq.php"
+                      class="nav-link <?= isActivePage('category-faq.php') ?>">
+                        <i class="nav-icon fa-solid fa-circle"></i>
+                        <p>Category FAQ</p>
+                    </a>
+                </li>
+
+                <!-- FAQ -->
+                <li class="nav-item">
+                    <a href="./faq.php"
+                      class="nav-link <?= isActivePage('faq.php') ?>">
+                        <i class="nav-icon fa-solid fa-circle"></i>
+                        <p>FAQ</p>
+                    </a>
+                </li>
+
+            </ul>
         </li>
 
         <!-- 7. Recommended video -->
@@ -338,80 +348,136 @@ function isActivePage($page)
 
         <!-- 13. Category Management -->
         <li class="nav-item <?= in_array($currentPage, ['category-add.php', 'category.php']) ? 'menu-open' : '' ?>">
-          <a href="#" class="nav-link <?= in_array($currentPage, ['category-add.php', 'category.php']) ? 'active' : '' ?>">
+
+          <a
+            href="#"
+            class="nav-link <?= in_array($currentPage, ['category-add.php', 'category.php']) ? 'active' : '' ?>"
+          >
+
             <i class="nav-icon fa-solid fa-folder"></i>
+
             <p>
               <span class="menu-number">1</span>
               Category Management
               <i class="nav-arrow fa-solid fa-chevron-right"></i>
             </p>
+
           </a>
+
           <ul class="nav nav-treeview">
+
             <li class="nav-item">
-              <a href="./category-add.php" class="nav-link <?= isActivePage('category-add.php') ?>">
+              <a
+                href="./category-add.php"
+                class="nav-link <?= isActivePage('category-add.php') ?>"
+              >
                 <i class="nav-icon fa-solid fa-circle"></i>
                 <p>Add Category</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="./category.php" class="nav-link <?= isActivePage('category.php') ?>">
+              <a
+                href="./category.php"
+                class="nav-link <?= isActivePage('category.php') ?>"
+              >
                 <i class="nav-icon fa-solid fa-circle"></i>
                 <p>Category Management</p>
               </a>
             </li>
+
           </ul>
+
         </li>
+
 
         <!-- 14. Course Management -->
         <li class="nav-item <?= in_array($currentPage, ['course-add.php', 'course.php']) ? 'menu-open' : '' ?>">
-          <a href="#" class="nav-link <?= in_array($currentPage, ['course-add.php', 'course.php']) ? 'active' : '' ?>">
+
+          <a
+            href="#"
+            class="nav-link <?= in_array($currentPage, ['course-add.php', 'course.php']) ? 'active' : '' ?>"
+          >
+
             <i class="nav-icon fa-solid fa-desktop"></i>
+
             <p>
               <span class="menu-number">2</span>
               Course Management
               <i class="nav-arrow fa-solid fa-chevron-right"></i>
             </p>
+
           </a>
+
           <ul class="nav nav-treeview">
+
             <li class="nav-item">
-              <a href="./course-add.php" class="nav-link <?= isActivePage('course-add.php') ?>">
+              <a
+                href="./course-add.php"
+                class="nav-link <?= isActivePage('course-add.php') ?>"
+              >
                 <i class="nav-icon fa-solid fa-circle"></i>
                 <p>Add Course</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="./course.php" class="nav-link <?= isActivePage('course.php') ?>">
+              <a
+                href="./course.php"
+                class="nav-link <?= isActivePage('course.php') ?>"
+              >
                 <i class="nav-icon fa-solid fa-circle"></i>
                 <p>Course Management</p>
               </a>
             </li>
+
           </ul>
+
         </li>
+
 
         <!-- 15. Lesson Management -->
         <li class="nav-item <?= in_array($currentPage, ['lesson-add.php', 'lesson.php']) ? 'menu-open' : '' ?>">
-          <a href="#" class="nav-link <?= in_array($currentPage, ['lesson-add.php', 'lesson.php']) ? 'active' : '' ?>">
+
+          <a
+            href="#"
+            class="nav-link <?= in_array($currentPage, ['lesson-add.php', 'lesson.php']) ? 'active' : '' ?>"
+          >
+
             <i class="nav-icon fa-solid fa-desktop"></i>
+
             <p>
               <span class="menu-number">3</span>
               Lesson Management
               <i class="nav-arrow fa-solid fa-chevron-right"></i>
             </p>
+
           </a>
+
           <ul class="nav nav-treeview">
+
             <li class="nav-item">
-              <a href="./lesson-add.php" class="nav-link <?= isActivePage('lesson-add.php') ?>">
+              <a
+                href="./lesson-add.php"
+                class="nav-link <?= isActivePage('lesson-add.php') ?>"
+              >
                 <i class="nav-icon fa-solid fa-circle"></i>
                 <p>Add Lesson</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="./lesson.php" class="nav-link <?= isActivePage('lesson.php') ?>">
+              <a
+                href="./lesson.php"
+                class="nav-link <?= isActivePage('lesson.php') ?>"
+              >
                 <i class="nav-icon fa-solid fa-circle"></i>
                 <p>Lesson Management</p>
               </a>
             </li>
+
           </ul>
+
         </li>
 
       </ul>
