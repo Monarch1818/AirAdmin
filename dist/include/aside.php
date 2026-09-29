@@ -252,62 +252,39 @@ function isActivePage($page)
 
         </li>
 
-
-        <!-- ===================================================== -->
+        
         <!-- 6. FAQ -->
-        <!-- ===================================================== -->
+        <li class="nav-item <?= in_array($currentPage, ['category-faq.php', 'faq.php']) ? 'menu-open' : '' ?>">
+            <a href="#"
+              class="nav-link <?= in_array($currentPage, ['category-faq.php', 'faq.php']) ? 'active' : '' ?>">
+                <i class="nav-icon fa-solid fa-circle-question"></i>
+                <p>
+                    FAQ
+                    <i class="nav-arrow fa-solid fa-chevron-right"></i>
+                </p>
+            </a>
 
-        <li class="nav-item">
+            <ul class="nav nav-treeview">
 
-          <a
-            href="#"
-            class="nav-link"
-          >
+                <!-- Category FAQ -->
+                <li class="nav-item">
+                    <a href="./category-faq.php"
+                      class="nav-link <?= isActivePage('category-faq.php') ?>">
+                        <i class="nav-icon fa-solid fa-circle"></i>
+                        <p>Category FAQ</p>
+                    </a>
+                </li>
 
-            <i class="nav-icon fa-solid fa-circle-question"></i>
+                <!-- FAQ -->
+                <li class="nav-item">
+                    <a href="./faq.php"
+                      class="nav-link <?= isActivePage('faq.php') ?>">
+                        <i class="nav-icon fa-solid fa-circle"></i>
+                        <p>FAQ</p>
+                    </a>
+                </li>
 
-            <p>
-              FAQ
-              <i class="nav-arrow fa-solid fa-chevron-right"></i>
-            </p>
-
-          </a>
-
-
-          <ul class="nav nav-treeview">
-
-            <li class="nav-item">
-
-              <a
-                href="./faq-category.php"
-                class="nav-link"
-              >
-
-                <i class="nav-icon fa-solid fa-circle"></i>
-
-                <p>Category FAQ</p>
-
-              </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                href="./faq.php"
-                class="nav-link"
-              >
-
-                <i class="nav-icon fa-solid fa-circle"></i>
-
-                <p>FAQ</p>
-
-              </a>
-
-            </li>
-
-          </ul>
+            </ul>
 
         </li>
 
@@ -685,9 +662,11 @@ function isActivePage($page)
           </a>
 
 
+
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
+
 
               <a
                 href="./category-add.php"
@@ -702,8 +681,8 @@ function isActivePage($page)
 
             </li>
 
-
             <li class="nav-item">
+
 
               <a
                 href="./category.php"
@@ -721,6 +700,7 @@ function isActivePage($page)
           </ul>
 
         </li>
+
 
 
         <!-- ===================================================== -->
@@ -746,6 +726,7 @@ function isActivePage($page)
 
             <i class="nav-icon fa-solid fa-folder"></i>
 
+
             <p>
               <span class="menu-number">2</span>
               Course Management
@@ -755,9 +736,11 @@ function isActivePage($page)
           </a>
 
 
+
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
+
 
               <a
                 href="./course-add.php"
@@ -773,7 +756,9 @@ function isActivePage($page)
             </li>
 
 
+
             <li class="nav-item">
+
 
               <a
                 href="./course.php"
@@ -791,6 +776,7 @@ function isActivePage($page)
           </ul>
 
         </li>
+
 
 
         <!-- ===================================================== -->
@@ -816,6 +802,7 @@ function isActivePage($page)
 
             <i class="nav-icon fa-solid fa-folder"></i>
 
+
             <p>
               <span class="menu-number">3</span>
               Lesson Management
@@ -825,9 +812,11 @@ function isActivePage($page)
           </a>
 
 
+
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
+
 
               <a
                 href="./lesson-add.php"
@@ -843,7 +832,9 @@ function isActivePage($page)
             </li>
 
 
+
             <li class="nav-item">
+
 
               <a
                 href="./lesson.php"
